@@ -12,7 +12,6 @@ function getRandomCourse() {
     "Mercedes",
     "Nissan",
     "Pejo",
-    "Togg",
   ];
  return getRandomCourse[Math.floor(Math.random() * courseArray.length)];
 }
