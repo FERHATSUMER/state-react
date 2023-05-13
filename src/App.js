@@ -12,20 +12,23 @@ function getRandomCourse() {
     "Mercedes",
     "Nissan",
     "Pejo",
+    "Togg",
   ];
- return getRandomCourse[Math.floor(Math.random() * courseArray.length)];
+  return getRandomCourse[Math.floor(Math.random() * courseArray.length)];
 }
 
 function App() {
   const [courses, setCourses] = useState([]);
 
   const handleClick = () => {
-    setCourses([...courses, getRandomCourse])
+    setCourses([...courses, getRandomCourse]);
   };
   return (
     <div className="App">
       <button onClick={handleClick}>Araba Ekle </button>
-      <Course />
+      {courses.map((course, index) => {
+       return <Course key={index} carName={course} />;
+      })}
     </div>
   );
 }
