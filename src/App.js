@@ -1,6 +1,6 @@
-import { useState } from "react";
-import "./App.css";
-import Course from "./Course";
+import Course from './Course';
+import './App.css';
+import { useState } from 'react';
 
 function getRandomCourse() {
   const courseArray = [
@@ -13,22 +13,22 @@ function getRandomCourse() {
     "Nissan",
     "Pejo",
     "Togg",
-  ];
-  return getRandomCourse[Math.floor(Math.random() * courseArray.length)];
+  ];  return courseArray[Math.floor(Math.random() * courseArray.length)];
 }
 
 function App() {
   const [courses, setCourses] = useState([]);
 
   const handleClick = () => {
-    setCourses([...courses, getRandomCourse]);
+    setCourses([...courses, getRandomCourse()]);
   };
+  const courseList = courses.map((course, index) => {
+    return <Course key={index} courseName={course} />;
+  });
   return (
     <div className="App">
       <button onClick={handleClick}>Araba Ekle </button>
-      {courses.map((course, index) => {
-       return <Course key={index} carName={course} />;
-      })}
+      <div>{courseList}</div>
     </div>
   );
 }

@@ -9,13 +9,28 @@ import Nissan from './images/Nissan.jpg'
 import Pejo from './images/Pejo.jpg'
 import Togg from './images/Togg.jpg'
 
-const Course = ({carName}) => {
-console.log(carName)
-  return (
-    <div>
-      <img src={Honda} alt='' />
-    </div>
-  )
+
+const courseMap={
+  Bmw,
+  Camaro,
+  Ferrari,
+  Fiat,
+  Honda,
+  Mercedes,
+  Nissan,
+  Pejo,
+  Togg
 }
 
-export default Course
+function Course({ courseName }) {
+  // console.log(Angular);
+  // console.log(courseName);
+  console.log(courseMap[courseName]);
+  return (
+    <div className="courseDiv">
+      <img className="course" src={courseMap[courseName]} alt="course" />
+    </div>
+  );
+}
+
+export default Course;
