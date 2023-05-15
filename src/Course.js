@@ -8,6 +8,7 @@ import Mercedes from './images/Mercedes.jpg'
 import Nissan from './images/Nissan.jpg'
 import Pejo from './images/Pejo.jpg'
 import Togg from './images/Togg.jpg'
+import './course.css'
 
 
 const courseMap={
