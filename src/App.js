@@ -27,8 +27,8 @@ function App() {
   });
   return (
     <div className="App">
-      <button onClick={handleClick}>Araba Ekle </button>
-      <div>{courseList}</div>
+      <button className="appButton" onClick={handleClick}>Araba Ekle </button>
+      <div className='courseList'>{courseList}</div>
     </div>
   );
 }
